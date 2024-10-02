@@ -1,0 +1,5 @@
+let data = new Map([
+  ['name', 'Anil'],
+  [true, 'bool key'],
+  [100, 'hundred']
+]);
