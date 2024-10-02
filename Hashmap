@@ -1,0 +1,8 @@
+let data = {
+  name: 'anil',
+  age: 28,
+  mail: "abc@test.com",
+  getName: function() {
+    return this.name;
+  }
+};
