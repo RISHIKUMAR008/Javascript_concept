@@ -1,0 +1,18 @@
+function linearSearch(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i; // Found the target at index i
+    }
+  }
+  return -1; // Target not found in the array
+}
+
+const arr = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91];
+const target = 23;
+const index = linearSearch(arr, target);
+
+if (index !== -1) {
+  console.log(`Target found at index ${index}`);
+} else {
+  console.log('Target not found');
+}
