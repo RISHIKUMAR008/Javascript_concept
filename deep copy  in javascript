@@ -1,0 +1,39 @@
+1. Object Creation:
+let obj = {
+    name: 'peter',
+    address: {
+        city: 'Noida',
+        state: 'UP'
+    }
+};
+
+
+
+2. Creating a Deep Copy:
+let user = JSON.parse(JSON.stringify(obj));
+
+
+
+3. Modifying the Copy:
+user.address.city = "Gurgaon";
+
+
+
+4. Logging the Objects:
+console.warn("object is: ", obj);
+console.warn("user is: ", user);
+
+
+
+Output:
+object is:  { name: 'peter', address: { city: 'Noida', state: 'UP' } }
+user is:  { name: 'peter', address: { city: 'Gurgaon', state: 'UP' } }
+
+
+
+The deep copy created by JSON.parse(JSON.stringify()) ensures that changes made to user don't affect the original obj. This is because the two objects now have separate memory locations.
+ * When user.address.city = "Gurgaon" is executed, only the city property within the user object is modified. The original obj remains unchanged.
+Key Points:
+ * Deep copying is essential when you want to modify a copy of an object without affecting the original object.
+ * JSON.parse(JSON.stringify()) is a common method for creating deep copies, but it can be inefficient for large objects.
+ * There are other techniques for creating deep copies, such as using libraries like Lodash or using recursive functions.
