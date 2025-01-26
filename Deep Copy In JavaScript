@@ -1,0 +1,19 @@
+const originalObject = {
+    name: 'John',
+    age: 30,
+    address: {
+        city: 'New York',
+        country: 'USA'
+    }
+};
+
+// Deep copy using JSON methods
+const deepCopyObject = 
+    JSON.parse(JSON.stringify(originalObject));
+
+// Modifying the originalObject
+originalObject.name = 'Alice';
+originalObject.address.city = 'Los Angeles';
+
+console.log(originalObject);
+console.log(deepCopyObject);
