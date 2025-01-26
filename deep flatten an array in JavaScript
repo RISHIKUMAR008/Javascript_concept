@@ -1,0 +1,8 @@
+<script> 
+const arr = [1,2,3,4,5,[6,[7,8,9]]]; 
+
+// Setting the depth value to 
+// Infinity to deep flatten the array 
+const flattened = arr.flat(Infinity); 
+console.log(flattened) 
+</script>
