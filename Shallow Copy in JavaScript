@@ -1,0 +1,16 @@
+const originalArray = 
+    [1, [2, 3], { key: 'value' }];
+
+// Shallow copy using slice()
+const shallowCopyArray = originalArray.slice();
+
+// Modifying the originalArray
+originalArray[0] = 10;
+originalArray[1][0] = 20;
+originalArray[2].key = 'updated';
+
+console.log(originalArray); 
+// [10, [20, 3], { key: 'updated' }]
+
+console.log(shallowCopyArray); 
+// [1, [20, 3], { key: 'updated' }]
